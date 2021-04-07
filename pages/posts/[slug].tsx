@@ -13,7 +13,7 @@ import path from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import Layout, { websiteHostURL } from '../../components/Layout';
+import Layout, { MetaProps, websiteHostURL } from '../../components/Layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 
@@ -34,7 +34,7 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const content = hydrate(source, { components });
-  const customMeta = {
+  const customMeta: MetaProps = {
     title: `${frontMatter.title} - Hunter Chang`,
     description: frontMatter.description,
     image: `${websiteHostURL}${frontMatter.image}`,

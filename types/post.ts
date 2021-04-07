@@ -1,8 +1,7 @@
 export type PostType = {
-  description?: string;
   date?: string;
+  description?: string;
   image?: string;
-  slug?: string;
+  slug: string;
   title: string;
-  type?: string;
 };

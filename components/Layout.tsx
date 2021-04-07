@@ -5,9 +5,17 @@ import React from 'react';
 import { PostType } from '../types/post';
 import Navigation from './Navigation';
 
+export interface MetaProps
+  extends Pick<PostType, 'date' | 'description' | 'image' | 'title'> {
+  /**
+   * For the meta tag `og:type`
+   */
+  type?: string;
+}
+
 type LayoutProps = {
   children: React.ReactNode;
-  customMeta?: PostType;
+  customMeta?: MetaProps;
 };
 
 export const websiteHostURL = 'https://nextjs-typescript-mdx-blog.vercel.app';
@@ -20,13 +28,12 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   React.useEffect(() => setMounted(true), []);
 
   const router = useRouter();
-  const meta: PostType = {
+  const meta: MetaProps = {
     title: 'Hunter Chang - Website',
     description:
       'Sleep Deprived Father. Senior Web Developer. Lover of all things Ramen and Kpop.',
     image: `${websiteHostURL}/images/site-preview.png`,
     type: 'website',
-    date: undefined,
     ...customMeta,
   };
 
@@ -38,7 +45,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
         <meta property="og:url" content={`${websiteHostURL}${router.asPath}`} />
         <link rel="canonical" href={`${websiteHostURL}${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Hunter Chang" />
+        <meta property="og:site_name" content="Hunter Chang - Website" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
