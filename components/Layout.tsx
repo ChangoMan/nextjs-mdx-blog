@@ -18,7 +18,7 @@ type LayoutProps = {
   customMeta?: MetaProps;
 };
 
-export const websiteHostURL = 'https://nextjs-typescript-mdx-blog.vercel.app';
+export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
 
 const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   const [mounted, setMounted] = React.useState(false);
@@ -32,7 +32,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
     title: 'Hunter Chang - Website',
     description:
       'Sleep Deprived Father. Senior Web Developer. Lover of all things Ramen and Kpop.',
-    image: `${websiteHostURL}/images/site-preview.png`,
+    image: `${WEBSITE_HOST_URL}/images/site-preview.png`,
     type: 'website',
     ...customMeta,
   };
@@ -42,8 +42,11 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       <Head>
         <title>{meta.title}</title>
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`${websiteHostURL}${router.asPath}`} />
-        <link rel="canonical" href={`${websiteHostURL}${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`${WEBSITE_HOST_URL}${router.asPath}`}
+        />
+        <link rel="canonical" href={`${WEBSITE_HOST_URL}${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Hunter Chang - Website" />
         <meta property="og:description" content={meta.description} />

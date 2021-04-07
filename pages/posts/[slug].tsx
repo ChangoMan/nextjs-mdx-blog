@@ -13,7 +13,7 @@ import path from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import Layout, { MetaProps, websiteHostURL } from '../../components/Layout';
+import Layout, { MetaProps, WEBSITE_HOST_URL } from '../../components/Layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 
@@ -37,7 +37,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
     title: `${frontMatter.title} - Hunter Chang`,
     description: frontMatter.description,
-    image: `${websiteHostURL}${frontMatter.image}`,
+    image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
     type: 'article',
   };
