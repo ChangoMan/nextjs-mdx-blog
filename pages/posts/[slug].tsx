@@ -13,7 +13,8 @@ import path from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import Layout, { MetaProps, WEBSITE_HOST_URL } from '../../components/Layout';
+import Layout, { WEBSITE_HOST_URL } from '../../components/Layout';
+import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 
