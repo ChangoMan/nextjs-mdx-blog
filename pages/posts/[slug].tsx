@@ -3,9 +3,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import hydrate from 'next-mdx-remote/hydrate';
-import renderToString from 'next-mdx-remote/render-to-string';
-import { MdxRemote } from 'next-mdx-remote/types';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,12 +28,11 @@ const components = {
 };
 
 type PostPageProps = {
-  source: MdxRemote.Source;
+  source: MDXRemoteSerializeResult;
   frontMatter: PostType;
 };
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
-  const content = hydrate(source, { components });
   const customMeta: MetaProps = {
     title: `${frontMatter.title} - Hunter Chang`,
     description: frontMatter.description,
@@ -51,7 +49,9 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
           {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
         </p>
-        <div className="prose dark:prose-dark">{content}</div>
+        <div className="prose dark:prose-dark">
+          <MDXRemote {...source} components={components} />
+        </div>
       </article>
     </Layout>
   );
@@ -63,8 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const { content, data } = matter(source);
 
-  const mdxSource = await renderToString(content, {
-    components,
+  const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
       remarkPlugins: [require('remark-code-titles')],
