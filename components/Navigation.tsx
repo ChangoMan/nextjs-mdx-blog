@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { FC } from 'react';
 
-const Navigation = (): JSX.Element => {
+const Navigation: FC = () => {
   return (
     <nav>
       <Link href="/">
