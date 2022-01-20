@@ -1,6 +1,6 @@
+import React, { FC } from 'react';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
-import React, { FC } from 'react';
 import '../styles/globals.css';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {

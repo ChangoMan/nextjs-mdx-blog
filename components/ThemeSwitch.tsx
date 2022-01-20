@@ -1,5 +1,5 @@
-import { useTheme } from 'next-themes';
 import React, { FC } from 'react';
+import { useTheme } from 'next-themes';
 
 /**
  * Based off of gatsby-theme-novela

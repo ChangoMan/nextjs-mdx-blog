@@ -1,6 +1,7 @@
+import React, { FC } from 'react';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import React, { FC } from 'react';
+
 import { MetaProps } from '../types/layout';
 import { getEnvVar } from '../utils/dotEnvs';
 

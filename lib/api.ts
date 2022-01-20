@@ -1,6 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
+
 import { POSTS_PATH } from '../utils/mdxUtils';
 
 export function getPostSlugs(): string[] {

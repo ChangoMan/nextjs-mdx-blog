@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import { LayoutProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';

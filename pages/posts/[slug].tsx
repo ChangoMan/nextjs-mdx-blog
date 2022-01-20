@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import { format, parseISO } from 'date-fns';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -9,9 +10,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
-import React, { FC } from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
+
 import Layout from '../../components/Layout';
 import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
