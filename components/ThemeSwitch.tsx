@@ -29,6 +29,7 @@ const ThemeSwitch = (): JSX.Element => {
     >
       <div className="moon-or-sun" />
       <div className="moon-mask" />
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>{`
         .theme-button {
           opacity: 0.5;
