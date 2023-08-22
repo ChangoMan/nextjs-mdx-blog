@@ -1,4 +1,5 @@
 import { WEBSITE_HOST_URL } from '@/lib/constants'
+import type { Metadata } from 'next'
 
 const meta = {
   title: 'About Me',
