@@ -2,15 +2,12 @@
 
 A Next.js starter for your next blog or personal site. Built with:
 
-- [Typescript](https://www.typescriptlang.org/)
+- Next.js App Router
+- Content processing with [Contentlayer](https://www.contentlayer.dev/)
 - Write posts with [MDX](https://mdxjs.com/)
 - Style with [Tailwind CSS](https://tailwindcss.com/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
-This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob/leerob.io) and [Anson Lichtfuss](https://github.com/ansonlichtfuss/website).
+This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob/leerob.io).
 
 👀 [View the Live Demo](https://nextjs-typescript-mdx-blog.vercel.app/)
 
@@ -20,13 +17,15 @@ This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob
 git clone https://github.com/ChangoMan/nextjs-typescript-mdx-blog.git
 cd nextjs-typescript-mdx-blog
 
-yarn install
-# or
 npm install
 
-yarn dev
-# or
 npm run dev
 ```
 
 Your new site will be up at http://localhost:3000/
+
+Blog posts can be added to the `posts` directory, in the root folder.
+
+Update the `WEBSITE_HOST_URL` when taking your site live. This lives in `/src/lib/constants.ts`
+
+Make sure to update the `sitemap.ts` file, specifically the `const routes` if you add more pages to the website.
