@@ -1,6 +1,8 @@
 # NextJS - Typescript - MDX - Blog
 
-A Next.js starter for your next blog or personal site. Built with:
+UPDATED on 08-22-23 to use Next.js App Router!
+
+A Next.js starter template for your next blog or personal site. Built with:
 
 - Next.js App Router
 - Content processing with [Contentlayer](https://www.contentlayer.dev/)
