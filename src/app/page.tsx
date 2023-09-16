@@ -1,6 +1,8 @@
 import { PostCard } from '@/components/PostCard'
+import { Button } from '@/components/ui/button'
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
+import { Github } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
@@ -28,12 +30,14 @@ export default function Home() {
           <li>Typescript</li>
         </ul>
 
-        <a
-          href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog"
-          className="inline-block rounded-md bg-blue-600 px-7 py-3 text-white hover:bg-blue-700 hover:text-white dark:text-white dark:hover:text-white"
+        <Button
+          className="text-primary-foreground hover:text-primary-foreground dark:text-primary-foreground dark:hover:text-primary-foreground"
+          asChild
         >
-          Get the source code!
-        </a>
+          <a href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog">
+            <Github className="mr-1" /> Get the source code!
+          </a>
+        </Button>
       </div>
 
       <div className="mt-16">
