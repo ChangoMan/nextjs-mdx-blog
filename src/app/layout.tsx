@@ -5,7 +5,7 @@ import ThemeSwitch from '@/components/ThemeSwitch'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import './globals.css'
+import './global.css'
 
 const meta = {
   title: 'Hunter Chang - Website',
