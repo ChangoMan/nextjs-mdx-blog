@@ -29,9 +29,21 @@ export default function Home() {
               Contentlayer
             </Link>
           </li>
-          <li>MDX</li>
-          <li>Tailwind CSS</li>
-          <li>Typescript</li>
+          <li>
+            <Link className="link" href="https://mdxjs.com/">
+              MDX
+            </Link>
+          </li>
+          <li>
+            <Link className="link" href="https://ui.shadcn.com/">
+              shadcn-ui
+            </Link>
+          </li>
+          <li>
+            <Link className="link" href="https://tailwindcss.com/">
+              Tailwind CSS
+            </Link>
+          </li>
         </ul>
 
         <Button asChild>

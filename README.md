@@ -1,4 +1,4 @@
-# NextJS - Typescript - MDX - Blog
+# NextJS - MDX - shadcn-ui - Tailwind - Blog
 
 **UPDATED on 2023-08-22 to use Next.js App Router!**
 
@@ -7,6 +7,7 @@ A Next.js starter template for your next blog or personal site. Built with:
 - Next.js [App Router](https://nextjs.org/docs/app)
 - Content processing with [Contentlayer](https://www.contentlayer.dev/)
 - Write posts with [MDX](https://mdxjs.com/)
+- UI components with [shadcn-ui](https://ui.shadcn.com/)
 - Style with [Tailwind CSS](https://tailwindcss.com/)
 
 This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob/leerob.io).
