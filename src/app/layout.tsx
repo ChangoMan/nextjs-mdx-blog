@@ -1,4 +1,4 @@
-import { Providers } from '@/app/providers'
+import { ThemeProvider } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Navigation } from '@/components/Navigation'
 import ThemeSwitch from '@/components/ThemeSwitch'
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <header className="py-4">
             <Container>
               <div className="flex items-center justify-between py-6">
@@ -74,7 +74,7 @@ export default function RootLayout({
               </p>
             </Container>
           </footer>
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   )
