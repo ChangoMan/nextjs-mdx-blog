@@ -1,11 +1,9 @@
 ---
-title: Example Post
-description: An example post with code blocks and Image component.
-date: 2021-03-20
+title: Next.js MDX Blog
+description: Steps to help you get started with Next.js MDX Blog
+date: 2023-09-16
 ---
 
-## Heading H2
-
 <Image
   alt={`Bridge`}
   src={`/images/bridge.jpg`}
@@ -14,36 +12,26 @@ date: 2021-03-20
   priority
 />
 
-This is an example blog post with React components. This page is using the `Image` component from Next.js.
+### Getting Started
 
-```jsx
-<Image
-  alt={`Bridge`}
-  src={`/images/bridge.jpg`}
-  width={1440}
-  height={960}
-  priority
-/>
+Clone the repo and install the dependencies.
+
+```bash
+git clone https://github.com/ChangoMan/nextjs-typescript-mdx-blog.git
+
+cd nextjs-typescript-mdx-blog
+
+npm install
+
+npm run dev
 ```
 
-### Code Blocks
+Your new site will be up at http://localhost:3000/
 
-This starter also comes with fancy code blocks.
+Blog posts can be added to the `posts` directory, in the root folder.
 
-```jsx
-import React, { useState } from 'react'
+Update the `WEBSITE_HOST_URL` when taking your site live. This lives in `/src/lib/constants.ts`
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0)
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
-  )
-}
-```
+Make sure to update the `sitemap.ts` file, specifically the `const routes` if you add more pages to the website.
 
 Go back [Home](/).
