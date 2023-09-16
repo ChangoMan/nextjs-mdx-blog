@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, 'bg-zinc-50 dark:bg-gray-900')}>
+      <body className={clsx(inter.className)}>
         <Providers>
           <header className="py-4">
             <Container>
