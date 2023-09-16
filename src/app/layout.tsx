@@ -3,13 +3,9 @@ import { Container } from '@/components/Container'
 import { Navigation } from '@/components/Navigation'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
-import clsx from 'clsx'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 const meta = {
   title: 'Hunter Chang - Website',
@@ -55,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className)}>
+      <body>
         <Providers>
           <header className="py-4">
             <Container>
