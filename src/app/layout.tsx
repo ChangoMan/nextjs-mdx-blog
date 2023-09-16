@@ -68,7 +68,7 @@ export default function RootLayout({
             <Container>
               <p>
                 Built by{' '}
-                <Link href="https://twitter.com/hunterhchang">
+                <Link className="link" href="https://twitter.com/hunterhchang">
                   Hunter Chang
                 </Link>
               </p>

@@ -20,20 +20,21 @@ export default function Home() {
         </p>
         <ul className="my-6 list-disc space-y-2 pl-4">
           <li>
-            <Link href="https://nextjs.org/docs/app">Next.js - App Router</Link>
+            <Link className="link" href="https://nextjs.org/docs/app">
+              Next.js - App Router
+            </Link>
           </li>
           <li>
-            <Link href="https://www.contentlayer.dev/">Contentlayer</Link>
+            <Link className="link" href="https://www.contentlayer.dev/">
+              Contentlayer
+            </Link>
           </li>
           <li>MDX</li>
           <li>Tailwind CSS</li>
           <li>Typescript</li>
         </ul>
 
-        <Button
-          className="text-primary-foreground hover:text-primary-foreground dark:text-primary-foreground dark:hover:text-primary-foreground"
-          asChild
-        >
+        <Button asChild>
           <a href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog">
             <Github className="mr-1" /> Get the source code!
           </a>
