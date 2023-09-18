@@ -17,7 +17,7 @@ This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob
 ## Getting Started
 
 ```bash
-git clone https://github.com/ChangoMan/nextjs-typescript-mdx-blog.git
+git clone https://github.com/ChangoMan/nextjs-mdx-blog.git
 cd nextjs-typescript-mdx-blog
 
 npm install

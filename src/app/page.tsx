@@ -47,7 +47,7 @@ export default function Home() {
         </ul>
 
         <Button asChild>
-          <a href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog">
+          <a href="https://github.com/ChangoMan/nextjs-mdx-blog">
             <Github className="mr-1" /> Get the source code!
           </a>
         </Button>
